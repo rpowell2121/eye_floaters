@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearVision | Next-Gen Eye Floater Supplement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#f97316',
+                        },
+                        secondary: {
+                            600: '#9333ea',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #f97316, #9333ea);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #f97316, #9333ea);
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-eye text-orange-500 text-2xl"></i>
+                <span class="text-2xl font-bold gradient-text">ClearVision</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#science" class="text-gray-400 hover:text-white transition">Science</a>
+                <a href="#benefits" class="text-gray-400 hover:text-white transition">Benefits</a>
+                <a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a>
+                <a href="#waitlist" class="text-orange-500 hover:text-purple-500 transition">Join Waitlist</a>
+            </div>
+            <button class="md:hidden text-gray-400">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-20 md:py-32">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Say Goodbye to <span class="gradient-text">Eye Floaters</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    The first clinically-backed supplement designed to reduce visual disturbances and support long-term eye health.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#waitlist" class="gradient-bg text-white px-8 py-4 rounded-full font-bold text-center hover:opacity-90 transition">
+                        Join Waitlist <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#science" class="border border-gray-800 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-gray-900 transition">
+                        Learn More
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center space-x-2 text-gray-400">
+                    <i class="fas fa-check-circle text-orange-500"></i>
+                    <span>Doctor-formulated</span>
+                    <i class="fas fa-check-circle text-orange-500 ml-4"></i>
+                    <span>100% Natural</span>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full opacity-20 blur-3xl -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Eye health supplement" 
+                         class="w-full max-w-md mx-auto float-animation rounded-lg shadow-2xl">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-gradient-to-r from-orange-500 to-purple-600 p-4 rounded-full shadow-lg">
+                    <div class="bg-black p-3 rounded-full">
+                        <i class="fas fa-flask text-2xl gradient-text"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">10,000+</div>
+                    <div class="text-gray-400">Waitlist Signups</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">5</div>
+                    <div class="text-gray-400">Clinical Studies</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">24</div>
+                    <div class="text-gray-400">Active Ingredients</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">100%</div>
+                    <div class="text-gray-400">Natural Formula</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science" class="container mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The <span class="gradient-text">Science</span> Behind ClearVision</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Our patent-pending formula combines cutting-edge research with traditional remedies to target the root causes of eye floaters.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
+                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-dna text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cellular Protection</h3>
+                <p class="text-gray-400">
+                    Powerful antioxidants protect eye cells from oxidative stress that contributes to floaters.
+                </p>
+            </div>
+            
+            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
+                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-leaf text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Natural Collagen Support</h3>
+                <p class="text-gray-400">
+                    Plant-based compounds help maintain vitreous humor integrity to prevent new floaters.
+                </p>
+            </div>
+            
+            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
+                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-brain text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Neural Adaptation</h3>
+                <p class="text-gray-400">
+                    Unique nootropics help your brain filter out existing floaters more effectively.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="bg-gradient-to-b from-gray-900 to-black py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Clear vision" 
+                         class="w-full rounded-xl shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Experience <span class="gradient-text">Clearer Vision</span></h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Reduced Floaters</h3>
+                                <p class="text-gray-400">
+                                    Clinical studies show up to 68% reduction in visual disturbances after 90 days.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Sharper Focus</h3>
+                                <p class="text-gray-400">
+                                    Enhanced contrast sensitivity and visual acuity for reading and screen time.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Long-term Protection</h3>
+                                <p class="text-gray-400">
+                                    Prevents new floaters from forming by supporting vitreous health.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">No Side Effects</h3>
+                                <p class="text-gray-400">
+                                    Unlike invasive procedures, our formula is safe for long-term use.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="container mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">What <span class="gradient-text">Early Users</span> Say</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Our beta testers have reported remarkable improvements in their visual comfort.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
+                <div class="flex items-center mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">JD</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-bold">James D.</h4>
+                        <div class="flex text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    "After 30 years of dealing with floaters, I noticed a significant reduction within just 6 weeks. I can finally enjoy reading again without distraction."
+                </p>
+                <div class="text-sm text-gray-500">Beta Tester • 62 years old</div>
+            </div>
+            
+            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
+                <div class="flex items-center mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">SM</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-bold">Sarah M.</h4>
+                        <div class="flex text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    "As a graphic designer, floaters were ruining my career. ClearVision gave me back my visual clarity and confidence. The difference is night and day."
+                </p>
+                <div class="text-sm text-gray-500">Beta Tester • 34 years old</div>
+            </div>
+            
+            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
+                <div class="flex items-center mb-6">
+                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">RT</span>
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="font-bold">Robert T.</h4>
+                        <div class="flex text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    "I was skeptical but desperate. After 3 months, my floaters are about 50% less noticeable. I'm continuing the regimen and already seeing more improvement."
+                </p>
+                <div class="text-sm text-gray-500">Beta Tester • 45 years old</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="bg-gradient-to-br from-gray-900 to-black py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-black rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-800">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our <span class="gradient-text">Exclusive Waitlist</span></h2>
+                    <p class="text-gray-400">
+                        Be the first to access ClearVision when we launch. Limited initial stock available.
+                    </p>
+                </div>
+                
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="concern" class="block text-gray-400 mb-2">Primary Visual Concern</label>
+                        <select id="concern" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <option value="">Select your main concern</option>
+                            <option value="floaters">Floaters</option>
+                            <option value="blur">Blurred Vision</option>
+                            <option value="light">Light Sensitivity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="consent" type="checkbox" class="w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-orange-500">
+                        </div>
+                        <label for="consent" class="ml-3 text-sm text-gray-400">
+                            I agree to receive updates about ClearVision and understand I can unsubscribe anytime.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="w-full gradient-bg text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition">
+                        Secure My Spot <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+                
+                <div class="mt-8 text-center text-gray-500 text-sm">
+                    <p>Join 10,000+ people on our waitlist. We respect your privacy and won't spam you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container mx-auto px-6 py-20 max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Frequently <span class="gradient-text">Asked Questions</span></h2>
+        
+        <div class="space-y-4">
+            <div class="border-b border-gray-800 pb-4">
+                <button class="flex justify-between items-center w-full text-left group">
+                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">How does ClearVision work?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition transform group-focus:rotate-180"></i>
+                </button>
+                <div class="mt-2 text-gray-400">
+                    <p>ClearVision combines three mechanisms: antioxidant protection for eye cells, collagen support for the vitreous humor, and neural adaptation to help your brain filter out existing floaters. This comprehensive approach addresses both the physical causes and perceptual aspects of floaters.</p>
+                </div>
+            </div>
+            
+            <div class="border-b border-gray-800 pb-4">
+                <button class="flex justify-between items-center w-full text-left group">
+                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">How soon will I see results?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
+                </button>
+                <div class="mt-2 text-gray-400">
+                    <p>Most users report noticing improvements within 4-6 weeks, with optimal results typically appearing after 3 months of consistent use. Individual results may vary based on factors like age, floater severity, and overall eye health.</p>
+                </div>
+            </div>
+            
+            <div class="border-b border-gray-800 pb-4">
+                <button class="flex justify-between items-center w-full text-left group">
+                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">Is ClearVision safe?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
+                </button>
+                <div class="mt-2 text-gray-400">
+                    <p>Yes, ClearVision is formulated with 100% natural ingredients that have excellent safety profiles. However, as with any supplement, we recommend consulting with your healthcare provider before use, especially if you're pregnant, nursing, or taking medications.</p>
+                </div>
+            </div>
+            
+            <div class="border-b border-gray-800 pb-4">
+                <button class="flex justify-between items-center w-full text-left group">
+                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">When will ClearVision be available?</h3>
+                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
+                </button>
+                <div class="mt-2 text-gray-400">
+                    <p>We're currently in the final stages of production and expect to launch in Q1 2024. Join our waitlist to get early access and exclusive launch pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-eye text-orange-500 text-2xl"></i>
+                        <span class="text-2xl font-bold gradient-text">ClearVision</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        The next generation in eye health supplements.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">How it Works</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ingredients</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Clinical Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Science Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Refund Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">
+                    © 2023 ClearVision. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <p class="text-gray-500">
+                        <i class="fas fa-phone-alt mr-2"></i> (800) 555-1234
+                    </p>
+                    <p class="text-gray-500">
+                        <i class="fas fa-envelope mr-2"></i> support@clearvision.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="gradient-bg text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-110">
+            <i class="fas fa-comment-dots text-xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if(name && email) {
+                // In a real app, you would send this data to your server
+                alert(`Thanks ${name}! You've been added to our waitlist. We'll email you at ${email} when we launch.`);
+                document.querySelector('form').reset();
+                
+                // Scroll to thank you message (simulated)
+                window.scrollTo({
+                    top: document.getElementById('waitlist').offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // FAQ accordion functionality
+        const faqButtons = document.querySelectorAll('.border-b button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isExpanded = content.style.maxHeight;
+                
+                // Close all other items
+                document.querySelectorAll('.border-b div').forEach(item => {
+                    if(item !== content) {
+                        item.style.maxHeight = null;
+                        item.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current item
+                if(isExpanded) {
+                    content.style.maxHeight = null;
+                    button.querySelector('i').classList.remove('rotate-180');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    button.querySelector('i').classList.add('rotate-180');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
