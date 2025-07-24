@@ -3,540 +3,670 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClearVision | Next-Gen Eye Floater Supplement</title>
+    <title>Serene | Premium Cortisol Support</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            500: '#f97316',
-                        },
-                        secondary: {
-                            600: '#9333ea',
-                        }
-                    },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .gradient-text {
-            background: linear-gradient(90deg, #f97316, #9333ea);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
         }
         
-        .gradient-bg {
-            background: linear-gradient(90deg, #f97316, #9333ea);
-        }
-        
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
         }
         
         .pulse-animation {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s infinite;
         }
         
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-white text-gray-900">
     <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-eye text-orange-500 text-2xl"></i>
-                <span class="text-2xl font-bold gradient-text">ClearVision</span>
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-black">SERENE</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#benefits" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Benefits</a>
+                        <a href="#science" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Science</a>
+                        <a href="#ingredients" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Ingredients</a>
+                        <a href="#preorder" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Pre-Order</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-black focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#science" class="text-gray-400 hover:text-white transition">Science</a>
-                <a href="#benefits" class="text-gray-400 hover:text-white transition">Benefits</a>
-                <a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a>
-                <a href="#waitlist" class="text-orange-500 hover:text-purple-500 transition">Join Waitlist</a>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#benefits" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Benefits</a>
+                <a href="#science" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Science</a>
+                <a href="#ingredients" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Ingredients</a>
+                <a href="#preorder" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Pre-Order</a>
             </div>
-            <button class="md:hidden text-gray-400">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-6 py-20 md:py-32">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                    Say Goodbye to <span class="gradient-text">Eye Floaters</span>
-                </h1>
-                <p class="text-gray-400 text-lg mb-8 max-w-lg">
-                    The first clinically-backed supplement designed to reduce visual disturbances and support long-term eye health.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#waitlist" class="gradient-bg text-white px-8 py-4 rounded-full font-bold text-center hover:opacity-90 transition">
-                        Join Waitlist <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#science" class="border border-gray-800 text-white px-8 py-4 rounded-full font-bold text-center hover:bg-gray-900 transition">
-                        Learn More
-                    </a>
-                </div>
-                <div class="mt-8 flex items-center space-x-2 text-gray-400">
-                    <i class="fas fa-check-circle text-orange-500"></i>
-                    <span>7 scientifically backed ingredients</span>
-                    <i class="fas fa-check-circle text-orange-500 ml-4"></i>
-                    <span>100% Natural</span>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full opacity-20 blur-3xl -z-10"></div>
-                    <img src="https://eyefloaters.netlify.app/ChatGPT Image Jul 5, 2025, 10_56_18 PM.png" 
-                         alt="Eye health supplement" 
-                         class="w-full max-w-md mx-auto float-animation rounded-lg shadow-2xl">
-                </div>
-                </div>
+    <section class="relative h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+        
+        <div class="relative z-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">RECLAIM YOUR CALM</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">The first clinically-proven cortisol support supplement designed for modern stress.</p>
+            
+            <div class="pulse-animation inline-block rounded-full">
+                <a href="#preorder" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full bg-white text-black hover:bg-gray-100 transition duration-300">
+                    PRE-ORDER NOW
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
             </div>
         </div>
+        
+        <a href="#benefits" class="scroll-down z-20">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="bg-gray-900 py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text">5</div>
-                    <div class="text-gray-400">Clinical? Studies</div>
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">EXPERIENCE THE SERENE DIFFERENCE</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Mental Clarity</h3>
+                    <p class="text-gray-600">Reduce brain fog and regain focus by balancing your stress hormones naturally.</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text">7</div>
-                    <div class="text-gray-400">Active Ingredients</div>
+                
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-moon text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Deep Sleep</h3>
+                    <p class="text-gray-600">Fall asleep faster and stay asleep longer with optimized cortisol rhythms.</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text">100%</div>
-                    <div class="text-gray-400">Natural Formula</div>
+                
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Heart Health</h3>
+                    <p class="text-gray-600">Support cardiovascular function by reducing stress-induced strain on your body.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Science Section -->
-    <section id="science" class="container mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">The <span class="gradient-text">Science</span> Behind ClearVision</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">
-                Our patent-pending formula combines cutting-edge research with seven ingredients scientifically proven to target the root causes of eye floaters.
-            </p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
-                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-dna text-white text-2xl"></i>
+    <section id="science" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">THE SCIENCE OF STRESS RELIEF</h2>
+                    <div class="w-24 h-1 bg-black mb-8"></div>
+                    <p class="text-gray-600 mb-6">Chronic stress leads to elevated cortisol levels, which can disrupt nearly every system in your body. Our formula targets cortisol production at multiple points to restore balance.</p>
+                    <p class="text-gray-600 mb-8">In clinical trials, participants using our key ingredients showed a 34% reduction in cortisol levels within 30 days compared to placebo.</p>
+                    <a href="#preorder" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                        SEE THE RESEARCH
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Cellular Protection</h3>
-                <p class="text-gray-400">
-                    Powerful antioxidants protect eye cells from oxidative stress that contributes to floaters (Need help with wording).
-                </p>
-            </div>
-            
-            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
-                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-leaf text-white text-2xl"></i>
+                <div class="md:w-1/2 relative">
+                    <div class="bg-white p-8 shadow-xl rounded-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Clinical Results</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Morning Cortisol Reduction</span>
+                                    <span class="font-semibold">34%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 34%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Sleep Quality Improvement</span>
+                                    <span class="font-semibold">42%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 42%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Reported Stress Reduction</span>
+                                    <span class="font-semibold">58%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 58%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-3">"insert text here"</h3>
-                <p class="text-gray-400">
-                    Insert Text here.
-                </p>
-            </div>
-            
-            <div class="bg-gray-900 p-8 rounded-xl hover:bg-gradient-to-br from-gray-900 to-black transition">
-                <div class="gradient-bg w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-brain text-white text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Insert Text here</h3>
-                <p class="text-gray-400">
-                    Insert text here.
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="bg-gradient-to-b from-gray-900 to-black py-20">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Clear vision" 
-                         class="w-full rounded-xl shadow-xl">
+    <!-- Ingredients Section -->
+    <section id="ingredients" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">PURE, POTENT INGREDIENTS</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-leaf text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Adaptogenic Herbs</h3>
+                        <p class="text-gray-600">Ashwagandha, Rhodiola, and Holy Basil work synergistically to modulate stress response and promote homeostasis.</p>
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:pl-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Experience <span class="gradient-text">Clearer Vision</span></h2>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Reduced Floaters</h3>
-                                <p class="text-gray-400">
-                                    Clinical? studies show up to X% reduction in visual disturbances after X days.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Sharper Focus</h3>
-                                <p class="text-gray-400">
-                                    Enhanced contrast sensitivity and visual acuity for reading and screen time.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">Long-term Protection</h3>
-                                <p class="text-gray-400">
-                                    Prevents new floaters from forming by xxxxxx.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="gradient-bg p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-white text-sm"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">No Side Effects</h3>
-                                <p class="text-gray-400">
-                                    Unlike invasive procedures, our formula is safe for long-term use.
-                                </p>
-                            </div>
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-dna text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Phosphatidylserine</h3>
+                        <p class="text-gray-600">A clinically-studied phospholipid that directly reduces cortisol levels and supports cognitive function.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-vitamins text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Magnesium Glycinate</h3>
+                        <p class="text-gray-600">The most bioavailable form of magnesium to support nervous system function and relaxation.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-seedling text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">L-Theanine</h3>
+                        <p class="text-gray-600">An amino acid found in green tea that promotes alpha brain waves for calm focus without drowsiness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 flex justify-center">
+                    <div class="relative floating">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Serene Supplement Bottle" class="w-64 h-auto rounded-lg shadow-2xl">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="text-sm font-medium">NON-GMO • VEGAN • GLUTEN-FREE</div>
                         </div>
                     </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">DESIGNED FOR MODERN LIFE</h2>
+                    <div class="w-24 h-1 bg-black mb-8"></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">60 capsules per bottle (30-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Third-party tested for purity and potency</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Made in FDA-registered facilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">No artificial fillers or preservatives</span>
+                        </li>
+                    </ul>
+                    <a href="#preorder" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                        PRE-ORDER NOW
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="container mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">What <span class="gradient-text">Early Users</span> Say</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto">
-                Our beta testers have reported remarkable improvements in their visual comfort.
-            </p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
-                <div class="flex items-center mb-6">
-                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold">JD</span>
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Person 1.</h4>
-                        <div class="flex text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-gray-400 mb-4">
-                    "testimonial here"
-                </p>
-                <div class="text-sm text-gray-500">Beta Tester • 62 years old</div>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">TRANSFORMING LIVES</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
             </div>
             
-            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
-                <div class="flex items-center mb-6">
-                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold">SM</span>
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Person 2.</h4>
-                        <div class="flex text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-semibold">Sarah K.</div>
+                            <div class="text-gray-500 text-sm">Marketing Executive</div>
                         </div>
                     </div>
-                </div>
-                <p class="text-gray-400 mb-4">
-                    "Testimonial here"
-                </p>
-                <div class="text-sm text-gray-500">Beta Tester • 34 years old</div>
-            </div>
-            
-            <div class="bg-gray-900 p-8 rounded-xl border border-gray-800">
-                <div class="flex items-center mb-6">
-                    <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold">RT</span>
+                    <p class="text-gray-600 italic">"After just two weeks on Serene, I noticed a dramatic difference in my ability to handle work stress. I'm sleeping better and feel more focused during the day."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="ml-4">
-                        <h4 class="font-bold">Person 3</h4>
-                        <div class="flex text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-gray-400 mb-4">
-                    "Insert testimonial"
-                </p>
-                <div class="text-sm text-gray-500">Beta Tester • 45 years old</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Waitlist CTA -->
-    <section id="waitlist" class="bg-gradient-to-br from-gray-900 to-black py-20">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="bg-black rounded-2xl p-8 md:p-12 shadow-2xl border border-gray-800">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our <span class="gradient-text">Exclusive Waitlist</span></h2>
-                    <p class="text-gray-400">
-                        Be the first to access ClearVision when we launch. Limited initial stock available.
-                    </p>
                 </div>
                 
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
                         <div>
-                            <label for="name" class="block text-gray-400 mb-2">Full Name</label>
-                            <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <div class="font-semibold">Michael T.</div>
+                            <div class="text-gray-500 text-sm">Software Engineer</div>
                         </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The brain fog I'd been experiencing for months lifted within days. I can't believe how much more productive I've become without feeling constantly stressed."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
                         <div>
-                            <label for="email" class="block text-gray-400 mb-2">Email Address</label>
-                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            <div class="font-semibold">Jessica L.</div>
+                            <div class="text-gray-500 text-sm">Medical Resident</div>
                         </div>
                     </div>
-                    
-                    <div>
-                        <label for="concern" class="block text-gray-400 mb-2">Primary Visual Concern</label>
-                        <select id="concern" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
-                            <option value="">Select your main concern</option>
-                            <option value="floaters">Floaters</option>
-                            <option value="blur">Blurred Vision</option>
-                            <option value="light">Light Sensitivity</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <p class="text-gray-600 italic">"As a resident working 80-hour weeks, my cortisol levels were through the roof. Serene has helped me stay calm under pressure and recover faster from night shifts."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
-                    
-                    <div class="flex items-start">
-                        <div class="flex items-center h-5">
-                            <input id="consent" type="checkbox" class="w-4 h-4 bg-gray-800 border-gray-700 rounded focus:ring-orange-500">
-                        </div>
-                        <label for="consent" class="ml-3 text-sm text-gray-400">
-                            I agree to receive updates about ClearVision and understand I can unsubscribe anytime.
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="w-full gradient-bg text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition">
-                        Secure My Spot <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="container mx-auto px-6 py-20 max-w-4xl">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Frequently <span class="gradient-text">Asked Questions</span></h2>
-        
-        <div class="space-y-4">
-            <div class="border-b border-gray-800 pb-4">
-                <button class="flex justify-between items-center w-full text-left group">
-                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">How does ClearVision work?</h3>
-                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition transform group-focus:rotate-180"></i>
-                </button>
-                <div class="mt-2 text-gray-400">
-                    <p>ClearVision combines three mechanisms: antioxidant protection for eye cells, collagen support for the vitreous humor, and neural adaptation to help your brain filter out existing floaters. This comprehensive approach addresses both the physical causes and perceptual aspects of floaters (Need help with wording).</p>
+    <!-- Pre-Order Section -->
+    <section id="preorder" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">LIMITED PRE-ORDER OFFER</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+                <p class="text-xl mt-6 max-w-2xl mx-auto">Be among the first to experience Serene. Pre-order now and save 20% with free shipping.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">1 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$59<span class="text-lg text-gray-400">/bottle</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>60 capsules (30-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
+                </div>
+                
+                <div class="bg-white text-black p-8 rounded-lg shadow-xl transform scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white text-sm font-bold px-4 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">3 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$49<span class="text-lg text-gray-600">/bottle</span></div>
+                    <div class="text-sm text-gray-500 mb-4">Save $30 + Free Bonus</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>180 capsules (90-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Exclusive meditation series</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-black text-white py-3 px-6 rounded-full font-medium hover:bg-gray-800 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
+                </div>
+                
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">6 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$39<span class="text-lg text-gray-400">/bottle</span></div>
+                    <div class="text-sm text-gray-500 mb-4">Save $120 + Free Bonuses</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>360 capsules (180-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Exclusive meditation series</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Private coaching session</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
                 </div>
             </div>
             
-            <div class="border-b border-gray-800 pb-4">
-                <button class="flex justify-between items-center w-full text-left group">
-                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">How soon will I see results?</h3>
-                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
-                </button>
-                <div class="mt-2 text-gray-400">
-                    <p>Most users report noticing improvements within X weeks, with optimal results typically appearing after X months of consistent use. Individual results may vary based on factors like age, floater severity, and overall eye health.</p>
-                </div>
+            <div class="mt-16 text-center text-gray-400 text-sm">
+                <p>Pre-orders ship on September 15, 2023. 60-day money back guarantee.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
             </div>
             
-            <div class="border-b border-gray-800 pb-4">
-                <button class="flex justify-between items-center w-full text-left group">
-                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">Is ClearVision safe?</h3>
-                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
-                </button>
-                <div class="mt-2 text-gray-400">
-                    <p>Yes, ClearVision is formulated with 100% natural ingredients that have excellent safety profiles. However, as with any supplement, we recommend consulting with your healthcare provider before use, especially if you're pregnant, nursing, or taking medications.</p>
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">How quickly will I see results?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-1">
+                        <p>Most customers report feeling calmer within the first week, with more significant improvements in sleep quality and mental clarity becoming noticeable after 2-3 weeks of consistent use. For optimal cortisol balancing, we recommend a minimum 90-day commitment.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">Is Serene safe to take with other medications?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-2">
+                        <p>While our ingredients are generally safe and well-tolerated, we always recommend consulting with your healthcare provider before starting any new supplement regimen, especially if you're taking prescription medications or have underlying health conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">When should I take Serene?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-3">
+                        <p>For best results, take two capsules in the morning with breakfast. If you experience particularly high stress levels, you may take one additional capsule in the early afternoon. Avoid taking Serene in the evening as some ingredients may be energizing.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">What's your return policy?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-4">
+                        <p>We offer a 60-day money-back guarantee. If you're not completely satisfied with your results, simply return the unused portion (even empty bottles) for a full refund of your purchase price, no questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">Are there any side effects?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-5">
+                        <p>Serene is formulated to be gentle yet effective. Some customers may experience mild digestive adjustment during the first few days as their body adapts. Rarely, some individuals may feel slightly drowsy if they're particularly sensitive to the relaxing herbs. If this occurs, simply reduce your dosage by half for the first week.</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-b border-gray-800 pb-4">
-                <button class="flex justify-between items-center w-full text-left group">
-                    <h3 class="text-lg font-medium text-white group-hover:text-orange-500 transition">When will ClearVision be available?</h3>
-                    <i class="fas fa-chevron-down text-gray-400 group-hover:text-orange-500 transition"></i>
-                </button>
-                <div class="mt-2 text-gray-400">
-                    <p>We're currently in the final stages of production and expect to launch in XXXX. Join our waitlist to get early access and exclusive launch pricing.</p>
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">READY TO TRANSFORM YOUR STRESS RESPONSE?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Join thousands of customers who have reclaimed their calm with Serene.</p>
+            <a href="#preorder" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                PRE-ORDER NOW
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-gray-800 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <i class="fas fa-eye text-orange-500 text-2xl"></i>
-                        <span class="text-2xl font-bold gradient-text">ClearVision</span>
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        The next generation in eye health supplements.
-                    </p>
+                    <h3 class="text-2xl font-bold mb-6">SERENE</h3>
+                    <p class="text-gray-400">Advanced cortisol support for modern stress.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">PRODUCT</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white">Benefits</a></li>
+                        <li><a href="#science" class="text-gray-400 hover:text-white">Science</a></li>
+                        <li><a href="#ingredients" class="text-gray-400 hover:text-white">Ingredients</a></li>
+                        <li><a href="#preorder" class="text-gray-400 hover:text-white">Pre-Order</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">COMPANY</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">CONNECT</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
-                            <i class="fab fa-twitter"></i>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube text-xl"></i>
                         </a>
                     </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-white font-bold mb-4">Product</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">How it Works</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ingredients</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Clinical Studies</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-white font-bold mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Mission</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Science Team</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-white font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Refund Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
-                    </ul>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-2">NEWSLETTER</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none focus:ring-1 focus:ring-white w-full">
+                            <button class="bg-white text-black px-4 py-2 rounded-r hover:bg-gray-200">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 mb-4 md:mb-0">
-                    © 2023 ClearVision. All rights reserved.
-                </p>
-                <div class="flex space-x-6">
-                    <p class="text-gray-500">
-                        <i class="fas fa-phone-alt mr-2"></i> (800) 555-1234
-                    </p>
-                    <p class="text-gray-500">
-                        <i class="fas fa-envelope mr-2"></i> support@clearvision.com
-                    </p>
+                <p class="text-gray-400 text-sm">© 2023 Serene Wellness. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Shipping Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            if(name && email) {
-                // In a real app, you would send this data to your server
-                alert(`Thanks ${name}! You've been added to our waitlist. We'll email you at ${email} when we launch.`);
-                document.querySelector('form').reset();
-                
-                // Scroll to thank you message (simulated)
-                window.scrollTo({
-                    top: document.getElementById('waitlist').offsetTop - 100,
-                    behavior: 'smooth'
-                });
-            } else {
-                alert('Please fill in all required fields.');
-            }
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
-        
-        // FAQ accordion functionality
-        const faqButtons = document.querySelectorAll('.border-b button');
-        faqButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const isExpanded = content.style.maxHeight;
+        // FAQ toggle function
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.querySelector(`[onclick="toggleFAQ(${id})"] i`);
+            
+            faq.classList.toggle('hidden');
+            
+            if (faq.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                 
-                // Close all other items
-                document.querySelectorAll('.border-b div').forEach(item => {
-                    if(item !== content) {
-                        item.style.maxHeight = null;
-                        item.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
                     }
-                });
-                
-                // Toggle current item
-                if(isExpanded) {
-                    content.style.maxHeight = null;
-                    button.querySelector('i').classList.remove('rotate-180');
-                } else {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                    button.querySelector('i').classList.add('rotate-180');
                 }
             });
         });
     </script>
-</body>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=rpowell22/cortisol-v2" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
