@@ -1,0 +1,647 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4k Vision | Premium Eye Floater Support</title>
+
+  <script>
+    window.tailwind = {
+      config: {
+        theme: {
+          extend: {
+            // any custom styles here
+          }
+        }
+      }
+    };
+  </script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      }
+      70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 30px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+    <!-- Open Graph -->
+<meta property="og:title" content="4K Vision | Premium Eye Floater Support" />
+<meta property="og:description" content="Clinically-backed supplement to reduce and eliminate eye floaters." />
+<meta property="og:image" content="https://4kvisionlabs.com/ChatGPT%20Image%20Jul%2029%2C%202025%2C%2012_02_38%20PM.png" /> 
+<meta property="og:url" content="https://4kvisionlabs.com" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="4K Vision | Premium Eye Floater Support" />
+<meta name="twitter:description" content="Clinically-backed supplement to reduce and eliminate eye floaters." />
+<meta name="twitter:image" content="https://4kvisionlabs.com/ChatGPT%20Image%20Jul%2029%2C%202025%2C%2012_02_38%20PM.png" /> 
+       <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T4FV3H22');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FV3H22"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-black hover:opacity-80 transition">4K Vision</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#benefits" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Benefits</a>
+                        <a href="#science" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Science</a>
+                        <a href="#ingredients" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Ingredients</a>
+                        <a href="preorder.html" class="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium">Pre-Order Waitlist</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-black focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#benefits" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Benefits</a>
+                <a href="#science" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Science</a>
+                <a href="#ingredients" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Ingredients</a>
+                <a href="preorder.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-black">Pre-Order Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        <div class="absolute inset-0 bg-[url('https://4kvisionlabs.com/1487b21c-77c2-474b-b8fc-e355042113c8.webp')] bg-cover bg-center"></div>
+        
+        <div class="relative z-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">RECLAIM YOUR VISION</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">The most potent clinically-proven supplement designed to alleviate eye floaters.</p>
+            
+            <div class="pulse-animation inline-block rounded-full">
+                <a href="preorder.html" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full bg-white text-black hover:bg-gray-100 transition duration-300">
+                    JOIN THE PRE-ORDER WAITLIST
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+        
+        <a href="#benefits" class="scroll-down z-20">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">EXPERIENCE THE DIFFERENCE OF 4K VISION</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">42%</h3>
+                    <p class="text-gray-600">Visual Discomfort Reduction</p>
+                </div>
+                
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye-slash text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">70%</h3>
+                    <p class="text-gray-600">Disappearance of floaters</p>
+                </div>
+                
+                <div class="text-center px-6">
+                    <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">92%</h3>
+                    <p class="text-gray-600">Patient satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section id="science" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">THE SCIENCE OF WHAT CAUSES EYE FLOATERS</h2>
+                    <div class="w-24 h-1 bg-black mb-8"></div>
+                    <p class="text-gray-600 mb-6">Most of your eyes are filled with a jelly like substance known as the vitreous fluid, which contains a lot of collagen proteins. When these proteins become damaged, they clump up and cast shadows on your retina, which appear visually as floaters.</p>
+                    <p class="text-gray-600 mb-8">4K Vision uses clinically backed ingredients to prevent the damage to the vitreous fluid and to degrade any existing clumps, keeping your vision clear and free of debris.</p>
+                    <a href="preorder.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                        SIGN UP FOR UPDATES TO FOLLOW OUR JOURNEY
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+               <!-- <div class="md:w-1/2 relative">
+                    <div class="bg-white p-8 shadow-xl rounded-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Clinical Results</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Visual Discomfort Reduction</span>
+                                    <span class="font-semibold">42%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 42%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Disappearance of floaters</span>
+                                    <span class="font-semibold">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span>Patient satisfaction</span>
+                                    <span class="font-semibold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-black h-2.5 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+                                <div class="md:w-1/2 relative">
+ <img 
+    src="https://4kvisionlabs.com/floater graphic.webp" 
+    alt="Clinical Results Preview" 
+    class="w-full h-auto rounded-lg shadow-xl" 
+  />
+</div>
+
+    </section>
+
+    <!-- Ingredients Section -->
+    <section id="ingredients" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">PURE, POTENT INGREDIENTS</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-leaf text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Vitamin C</h3>
+                        <p class="text-gray-600">One of the body's main antioxidants, protecting your eyes from damage.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-seedling text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Grape Seed Extract</h3>
+                        <p class="text-gray-600">Full of powerful free radical scavenging, anti-inflammatory compounds</p>
+                    </div>
+                </div>
+                
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-capsules text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">L-Lysine</h3>
+                        <p class="text-gray-600">A key nutrient to support collagen structure</p>
+                    </div>
+                </div>
+                 <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-dna text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Bromelain</h3>
+                        <p class="text-gray-600">An enzyme from pineapple that shreds up unneeded proteins, including eye floaters</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-seedling text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Papain</h3>
+                        <p class="text-gray-600">An enzyme from papaya that digests damaged collagen</p>
+                    </div>
+                    </div>
+                       <div class="flex items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fas fa-question text-xl text-gray-800"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">TBD</h3>
+                        <p class="text-gray-600">Follow along as we finalize our ingredients </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 flex justify-center">
+                    <div class="relative floating">
+                        <img src="https://4kvisionlabs.com/4K Vision Eye Floater Supplement (1).webp" alt="4K Vision Supplement Bottle" class="w-96 h-auto rounded-lg shadow-2xl">
+                    </div> 
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">DESIGNED FOR MODERN LIFE</h2>
+                    <div class="w-24 h-1 bg-black mb-8"></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">60 capsules per bottle (30-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Third-party tested for purity and potency</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">Made in FDA-registered facilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700">No artificial fillers or preservatives</span>
+                        </li>
+                    </ul>
+                    <a href="preorder.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                        JOIN THE PRE-ORDER WAITLIST
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Section 
+    <section id="preorder" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">LIMITED PRE-ORDER OFFER</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+                <p class="text-xl mt-6 max-w-2xl mx-auto">Be among the first to experience Serene. Pre-order now and save 20% with free shipping.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">1 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$59<span class="text-lg text-gray-400">/bottle</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>60 capsules (30-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
+                </div>
+                
+                <div class="bg-white text-black p-8 rounded-lg shadow-xl transform scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-500 text-white text-sm font-bold px-4 py-1 rounded-full">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">3 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$49<span class="text-lg text-gray-600">/bottle</span></div>
+                    <div class="text-sm text-gray-500 mb-4">Save $30 + Free Bonus</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>180 capsules (90-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Exclusive meditation series</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-black text-white py-3 px-6 rounded-full font-medium hover:bg-gray-800 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
+                </div>
+                
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">6 MONTH SUPPLY</h3>
+                    <div class="text-4xl font-bold mb-6">$39<span class="text-lg text-gray-400">/bottle</span></div>
+                    <div class="text-sm text-gray-500 mb-4">Save $120 + Free Bonuses</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>360 capsules (180-day supply)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Free shipping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Digital guide to stress management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Exclusive meditation series</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                            <span>Private coaching session</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                        PRE-ORDER NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">How quickly will I see results?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-1">
+                        <p>Clinical studies indicate that results can be expected within 3 months of daily use. At the full dosage results can be seen in as little as one month.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">Is 4K Vision safe to take with other medications?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-2">
+                        <p>While our ingredients are generally safe and well-tolerated, we always recommend consulting with your healthcare provider before starting any new supplement regimen, especially if you're taking prescription medications or have underlying health conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">When should I take 4K Vision?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-3">
+                        <p>For best results, take the suggested dose with a meal.</p>
+                    </div>
+                </div>
+                
+                <div class="border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">What's your return policy?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-4">
+                        <p>Please reach out to us individually so we can determine the best path forward. We will provide refunds for defective products.</p>
+                    </div>
+                </div>
+                
+                <div class="pb-6">
+                    <button class="flex justify-between items-center w-full text-left group" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-medium text-gray-900 group-hover:text-black">Are there any side effects?</span>
+                        <i class="fas fa-plus text-gray-400 group-hover:text-black"></i>
+                    </button>
+                    <div class="mt-4 text-gray-600 hidden" id="faq-5">
+                        <p>Generally the formula is well tolerated, but if you do experience anything out of the ordinary, be sure to stop supplementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">READY TO TRANSFORM YOUR VISION?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Join our waitlist to get updates on our journey as we get closer to launch!</p>
+            <a href="preorder.html" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full bg-black text-white hover:bg-gray-800 transition duration-300">
+                JOIN PRE-ORDER WAITLIST 
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">4K Vision</h3>
+                    <p class="text-gray-400">Advanced eye floater support.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">PRODUCT</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white">Benefits</a></li>
+                        <li><a href="#science" class="text-gray-400 hover:text-white">Science</a></li>
+                        <li><a href="#ingredients" class="text-gray-400 hover:text-white">Ingredients</a></li>
+                        <li><a href="preorder.html" class="text-gray-400 hover:text-white">Pre-Order Waitlist</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">CONNECT</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/analyzeandoptimize/" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://x.com/Outdoctrination" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@analyze.and.optimize" target="_blank" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <!--<h4 class="text-sm font-semibold uppercase tracking-wider mb-2">NEWSLETTER</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none focus:ring-1 focus:ring-white w-full">
+                            <button class="bg-white text-black px-4 py-2 rounded-r hover:bg-gray-200">
+                                <i class="fas fa-arrow-right"></i> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 4k Vision Labs. All rights reserved.</p>
+                <!--<div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Shipping Policy</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        // FAQ toggle function
+        function toggleFAQ(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.querySelector(`[onclick="toggleFAQ(${id})"] i`);
+            
+            faq.classList.toggle('hidden');
+            
+            if (faq.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</html>
